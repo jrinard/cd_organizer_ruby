@@ -3,10 +3,15 @@ class Albums
 
   define_method(:initialize) do |title|
     @title = title
+    @id = @@albums.length().+(1)
   end
 
   define_method(:title) do
     @title
+  end
+
+  define_method(:id) do
+    @id
   end
 
   define_singleton_method(:all) do

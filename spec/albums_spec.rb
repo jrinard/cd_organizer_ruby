@@ -28,6 +28,14 @@ end
     end
   end
 
+  describe("#id") do
+  it("returns the id of the album") do
+    test_album = Albums.new("the score")
+    test_album.save()
+    expect(test_album.id()).to(eq(1))
+  end
+end
+
 
 
 end
