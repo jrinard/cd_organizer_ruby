@@ -3,6 +3,9 @@
 <h3>Here are all the albums</h3>
 <ul>
   <% @albums.each() do |album| %>
-    <li><a href="/albums/<%= albums.id() %>"><%= albums.title() %></a></li>
+    <li><a href="/albums/<%= album.id() %>"><%= album.title() %></a></li>
   <% end %>
 </ul>
+
+
+<a href="/">Home</a>

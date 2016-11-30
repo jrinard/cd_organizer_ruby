@@ -27,6 +27,14 @@ class Albums
     @@albums = []
   end
 
-
-
+  # finding id in route which is identification and comparing it to the array length for vehicle
+define_singleton_method(:find) do |identification|
+  found_album = nil
+  @@albums.each() do |album_temp|
+    if album_temp.id().eql?(identification.to_i())
+      found_album = album_temp
+    end
+  end
+  found_album
+end
 end
