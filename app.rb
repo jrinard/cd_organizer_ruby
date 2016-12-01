@@ -28,3 +28,15 @@ get('/albums/:id') do
   @album = Albums.find(params.fetch('id').to_i())
   erb(:album)
 end
+
+get('/artist/new') do
+   erb(:artist_form)
+end
+
+post('/artist') do
+  name = params.fetch('name')
+  neo_artist = Artist.new(name)
+  neo_artist.save()
+  
+  erb(:success)
+end
